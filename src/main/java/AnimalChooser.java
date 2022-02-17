@@ -17,11 +17,20 @@ public class AnimalChooser {
 
         // 3. Create components and put them in the frame.
         // This label will be replaced by an image later
-        JLabel label1 = new JLabel("");
-        frame.add(label1);
+        JLabel label1 = new JLabel();
+        frame.add(label1, BorderLayout.CENTER);
 
         JButton button1 = new JButton("Red Panda");
         frame.add(button1, BorderLayout.SOUTH);
+
+        JButton button2 = new JButton("Lion");
+        frame.add(button2, BorderLayout.NORTH);
+
+        JButton button3 = new JButton("Seal");
+        frame.add(button3, BorderLayout.EAST);
+
+        JButton button4 = new JButton("Tiger");
+        frame.add(button4, BorderLayout.WEST);
 
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
@@ -30,6 +39,26 @@ public class AnimalChooser {
             }
         });
 
+        button2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                ImageIcon icon = new ImageIcon("images/lion.jpg");
+                label1.setIcon(icon);
+            }
+        });
+
+        button3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                ImageIcon icon = new ImageIcon("images/seal.jpg");
+                label1.setIcon(icon);
+            }
+        });
+
+        button4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                ImageIcon icon = new ImageIcon("images/tiger.jpeg");
+                label1.setIcon(icon);
+            }
+        });
         // 4. Size the frame.
         frame.setSize(900, 500);
 

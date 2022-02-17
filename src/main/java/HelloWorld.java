@@ -6,7 +6,7 @@ public class HelloWorld {
 
 	public HelloWorld() {
         // 1. Create the frame (the window that will pop up)
-        JFrame frame = new JFrame("Hello World");
+        JFrame frame = new JFrame("Hello C Period");
         frame.setLayout(new FlowLayout());
 
         // 2. Choose what happens when you click the exit button
